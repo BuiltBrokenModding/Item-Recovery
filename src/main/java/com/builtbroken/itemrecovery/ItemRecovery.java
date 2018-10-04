@@ -1,5 +1,8 @@
 package com.builtbroken.itemrecovery;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
@@ -38,10 +41,21 @@ public class ItemRecovery
     @SidedProxy(clientSide = "com.builtbroken.itemrecovery.client.ClientProxy", serverSide = "com.builtbroken.itemrecovery.CommonProxy")
     public static CommonProxy sideProxy;
 
+    public static CreativeTabs creativeTabs;
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         NetworkRegistry.INSTANCE.registerGuiHandler(this, sideProxy);
+
+        creativeTabs = new CreativeTabs(DOMAIN)
+        {
+            @Override
+            public ItemStack createIcon()
+            {
+                return new ItemStack(Blocks.FURNACE); //TODO change
+            }
+        };
     }
 
     //@Mod.EventHandler

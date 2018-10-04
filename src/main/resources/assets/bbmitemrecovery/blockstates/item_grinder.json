@@ -1,0 +1,39 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_all",
+    "textures": {
+      "up": "bbmitemrecovery:blocks/stone_top",
+      "down": "bbmitemrecovery:blocks/stone_top",
+      "east": "bbmitemrecovery:blocks/stone_side",
+      "west": "bbmitemrecovery:blocks/stone_side",
+      "north": "bbmitemrecovery:blocks/grinder_front",
+      "south": "bbmitemrecovery:blocks/stone_side",
+      "particle": "bbmitemrecovery:blocks/stone_top"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ],
+    "rotation": {
+      "up": {},
+      "down": {},
+      "north": {
+        "y": 180
+      },
+      "south": {
+
+      },
+      "east": {
+        "y": 270
+      },
+      "west": {
+        "y": 90
+      }
+    }
+  }
+}
